@@ -1,21 +1,5 @@
 <?php
-
-
-///filter
-
-//FilterController
-// AccountController
-
-// AccountModel
-// MapModel
-// OrderModel
-// CompanyModel
-
-require_once __DIR__ . '/../private/Models/GoodsModel.php';
-require_once __DIR__ . '/../private/Models/ArticleModel.php';
-require_once __DIR__ . '/../private/Base/Controller.php';
-require_once __DIR__ . '/../private/Controllers/IndexController.php';
-require_once __DIR__ . '/../private/Controllers/ArticlesController.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 run();
 
@@ -35,8 +19,8 @@ function run() {
     if($routes[3]) {
         $get = $routes[3]; // условно: параметры get запроса
     }
-    $controller = ucfirst(strtolower($controller)) . 'Controller';
-    // Index . Controller
+    $controller = 'Dasha\Travelblog\Controllers\\' . ucfirst(strtolower($controller)) . 'Controller';
+    // Dasha\Travelblog\Controllers\IndexController
     // IndexController
 //    var_dump("Controller: $controller");
 
@@ -66,5 +50,8 @@ function run() {
 
 }
 
+//ini_set('display_errors', 'On');
+//sudo apt install composer
 
-
+//composer init
+//composer dump-autoload

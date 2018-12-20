@@ -1,4 +1,5 @@
 <?php
+namespace Dasha\Travelblog\Base;
 
 class Controller
 {

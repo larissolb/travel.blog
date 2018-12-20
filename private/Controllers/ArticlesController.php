@@ -1,10 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dasha
- * Date: 18.12.2018
- * Time: 20:16
- */
+namespace Dasha\Travelblog\Controllers;
+use Dasha\Travelblog\Base\Controller;
+use Dasha\Travelblog\Models\ArticleModel;
 
 class ArticlesController extends Controller
 {

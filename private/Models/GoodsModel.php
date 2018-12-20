@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dasha
- * Date: 18.12.2018
- * Time: 19:24
- */
+namespace Dasha\Travelblog\Models;
 
 class GoodsModel
 {

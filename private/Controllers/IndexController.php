@@ -1,6 +1,8 @@
 <?php
-//require_once "../Models/ArticleModel.php";
-//require_once "../Models/GoodsModel.php";
+namespace Dasha\Travelblog\Controllers;
+use Dasha\Travelblog\Base\Controller;
+use Dasha\Travelblog\Models\ArticleModel;
+use Dasha\Travelblog\Models\GoodsModel;
 
 class IndexController extends Controller
 {

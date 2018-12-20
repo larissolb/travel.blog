@@ -1,0 +1,13 @@
+{
+    "name": "dasha/travel.blog",
+    "description": "blog for study",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "Dasha\\Travelblog\\": "private/"
+        }
+    }
+}
