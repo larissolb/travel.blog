@@ -12,6 +12,12 @@ class Cookies
         // реализовать удаление Cookie
     }
 
+    public function setField($f){
+        $this->field = $f;
+    }
     // реализовать методы получения данных
 }
+
+
+
 

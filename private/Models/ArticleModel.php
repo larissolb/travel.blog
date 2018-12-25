@@ -1,8 +1,16 @@
 <?php
 namespace Dasha\Travelblog\Models;
 
+use Dasha\Travelblog\Base\DBConnection;
+
 class ArticleModel
 {
+    private $db;
+    public function __construct()
+    {
+        $this->db = new DBConnection();
+    }
+
     public function getArticles($count){
         $articles = [
             [
@@ -36,11 +44,12 @@ class ArticleModel
     }
 
     public function getArticleById($id){
-        // получение статьи из бд
-        return [
-            'id' => $id,
-            'title' => 'Статья ' . $id,
-            'description' => 'Описание статьи'
-        ];
+        $sql = "SELECT * FROM Article WHERE id:id";
+        $params = ['id'=>$id];
+
+        return $this->db->execute($sql, $params);
     }
 }
+
+
+

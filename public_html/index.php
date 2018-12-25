@@ -1,6 +1,11 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
+
+//$file = __DIR__ . '/../config.json';
+
+
+
 run();
 
 function run() {

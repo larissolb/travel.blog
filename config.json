@@ -1,8 +1,41 @@
 {
+
   "urls":{
+    "about":{
+      "path":"/about",
+      "controller":"CompanyController::aboutAction"
+    },
+    "history":{
+      "path":"/history",
+      "controller":"CompanyController::historyAction"
+    },
+    "goods":{
+      "path":"/goods",
+      "controller":"GoodsController::allGoods"
+    },
     "имя ссылки":{
-      "path":"/ссылка",
-      "controller":"имя контроллера::имя метода"
+      "path":"/goods/phones/sony",
+      "controller":"GoodsController::allGoods"
+    },
+    "имя ссылки":{
+      "path":"/account",
+      "controller":"AccountController::showAction"
+    },
+    "имя ссылки":{
+      "path":"/article/delete/{id}/",
+      "controller":"ArticleController::deleteAction"
+    },
+    "имя ссылки":{
+      "path":"/article/add",
+      "controller":"ArticleController::addAction"
+    },
+    "имя ссылки":{
+      "path":"/article/show/{id}",
+      "controller":"ArticleController::titleAction"
+    },
+    "имя ссылки":{
+      "path":"/article/show/{title}",
+      "controller":"ArticleController::showAction"
     }
   }
 }
