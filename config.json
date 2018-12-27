@@ -1,41 +1,27 @@
 {
-
+  "db" : {
+    "server":"localhost",
+    "dbname":"db",
+    "user":"username",
+    "pwd":"123"
+  },
   "urls":{
     "show article":{
-      "path":"/articles/show/{id}",
-      "controller":"ArticleController::showAction"
+      "path":"/",
+      "controller":"Dasha\\Travelblog\\Controllers\\IndexController::indexAction",
+      "method": "GET"
     },
+
     "history":{
       "path":"/history",
-      "controller":"CompanyController::historyAction"
+      "controller":"CompanyController::historyAction",
+      "method": "GET"
     },
+
     "goods":{
-      "path":"/goods",
-      "controller":"GoodsController::allGoods"
-    },
-    "имя ссылки":{
-      "path":"/goods/phones/sony",
-      "controller":"GoodsController::allGoods"
-    },
-    "имя ссылки":{
-      "path":"/account",
-      "controller":"AccountController::showAction"
-    },
-    "имя ссылки":{
-      "path":"/article/delete/{id}/",
-      "controller":"ArticleController::deleteAction"
-    },
-    "имя ссылки":{
-      "path":"/article/add",
-      "controller":"ArticleController::addAction"
-    },
-    "имя ссылки":{
-      "path":"/article/show/{id}",
-      "controller":"ArticleController::titleAction"
-    },
-    "имя ссылки":{
-      "path":"/article/show/{title}",
-      "controller":"ArticleController::showAction"
+      "path":"/goods/{id:\\d+}",
+      "controller":"GoodsController::allGoods",
+      "method": "GET"
     }
   }
 }

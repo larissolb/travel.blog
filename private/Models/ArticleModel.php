@@ -37,10 +37,10 @@ class ArticleModel
     }
 
     public function getArticleById($id){
-//        $sql = "SELECT * FROM Article WHERE id:id";
-//        $params = ['id'=>$id];
+        $sql = "SELECT * FROM Article WHERE id >:id AND price < 23";
+        $params = ['id'=>$id];
 //
-//        return $this->db->execute($sql, $params);
+        return $this->db->execute($sql, $params);
     }
 }
 

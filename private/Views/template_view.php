@@ -4,16 +4,16 @@
     <title><?php echo $title; ?></title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/static/css/menu.css">
-    <link rel="stylesheet" href="/static/css/slider.css">
-    <link rel="stylesheet" href="/static/css/cards.css">
-    <link rel="stylesheet" href="/static/css/articles.css">
-    <link rel="stylesheet" href="/static/css/enter_account_modal.css">
+    <link rel="stylesheet" href="static/css/menu.css">
+    <link rel="stylesheet" href="static/css/slider.css">
+    <link rel="stylesheet" href="static/css/cards.css">
+    <link rel="stylesheet" href="static/css/articles.css">
+    <link rel="stylesheet" href="static/css/enter_account_modal.css">
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,700'>
 
-    <link rel="stylesheet" href="/static/css/tabs.css">
+    <link rel="stylesheet" href="static/css/tabs.css">
 </head>
 
 <body>
