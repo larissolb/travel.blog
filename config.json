@@ -1,9 +1,9 @@
 {
 
   "urls":{
-    "about":{
-      "path":"/about",
-      "controller":"CompanyController::aboutAction"
+    "show article":{
+      "path":"/articles/show/{id}",
+      "controller":"ArticleController::showAction"
     },
     "history":{
       "path":"/history",
