@@ -1,29 +1,37 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dasha
- * Date: 27.12.2018
- * Time: 20:26
- */
-
 namespace Dasha\Travelblog\Base;
-
 
 class Application
 {
-
+    private $config;
 
     public function __construct($config)
     {
-//        $this->config_file = $config;
-        $file = __DIR__ . '/../config.json';
-        $config = json_decode(file_get_contents($file), true);
-        $urls = $config['urls'];
-        startRouter($urls);
+        $this->config = $this->loadConfig($config);
     }
 
-    public function startRouter($urls){
-        $router = new Router();
+    private function loadConfig($configPath)
+    {
+        if (!is_readable($configPath)) {
+            var_dump("not readable");
+        }
+        return $config = json_decode(file_get_contents($configPath), true);
+    }
+
+    public function handleRequest(Request $request){
+        $router = new Router($this->config['urls']);
+
+        $routeInfo = $router->dispatch($request->getMethod(), $request->getUri());
+        $controllerData = Controller::create($routeInfo);
+
+        $request->setParams($controllerData[1]);
+
+        $response = call_user_func_array($controllerData[0], [$request]);
+
+        if (!$response instanceof Response) {
+            throw new \LogicException('The controller must return the response object.');
+        }
+        return $response;
     }
 
 }

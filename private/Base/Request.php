@@ -18,18 +18,25 @@ class Request
     protected $server;
     protected $params;
 
-    public function __construct(array $params=[])
+    public function __construct()
     {
         $this->cookies = $_COOKIE;
         $this->get = $_GET;
         $this->post = $_POST;
         $this->files = $_FILES;
         $this->server = $_SERVER;
+    }
+
+    public function setParams($params){
         $this->params = $params;
     }
 
     public function getUri(){
         return $this->server()['REQUEST_URI'];
+    }
+
+    public function getMethod(){
+        return $this->server()['REQUEST_METHOD'];
     }
 
     public function cookies()
