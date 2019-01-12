@@ -1,5 +1,3 @@
-console.log("ffffff")
-
 function getSinPath(options) {
     var _options = options || {};
     var _width = _options.width || window.innerWidth;
@@ -43,7 +41,7 @@ function getSinPath(options) {
 
     var pathEl = document.createElementNS(svgNS, 'path');
     // The `getSinPath` function return the `path` in String format
-    console.log(pathEl);
+
     pathEl.setAttribute('d', getSinPath());
     pathEl.setAttribute('class', 'path-slider__path');
 

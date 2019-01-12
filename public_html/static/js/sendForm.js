@@ -22,10 +22,10 @@
     function responseHandler(response) {
         if (response === "USER_ADDED") {
             window.location.href = "/account";
-        } else if (response === "AUTH"){
+        } else if (response === "USER_AUTH"){
             window.location.href = "/account";
         } else {
-            console.log("вывод данных");
+            console.log("вывод ошибки данных");
         }
     }
 

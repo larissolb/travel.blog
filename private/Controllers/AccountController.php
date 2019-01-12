@@ -10,9 +10,16 @@ namespace Dasha\Travelblog\Controllers;
 
 
 use Dasha\Travelblog\Base\Controller;
+use Dasha\Travelblog\Models\AccountModel;
 
 class AccountController extends Controller
 {
+    private $accountModel;
+    public function __construct()
+    {
+     $this->accountModel = new AccountModel();
+    }
+
     public function accountAction(){
         $view = 'account_view.php';
         $title =  "Аккаунт";
@@ -22,13 +29,17 @@ class AccountController extends Controller
         parent::generateResponse($view, $data);
     }
 
-    public function registrationAction(){
-
-        return parent::generateAjaxResponse($_POST['login']);
+    public function registrationAction($request){
+        $postData = $request->post(); // массив $_POST
+        $answer = $this->accountModel->addUser($postData);
+        return parent::generateAjaxResponse($answer);
     }
 
-    public function authAction(){
-        echo $_POST['login'];
+    public function authAction($request){
+        $postData = $request->post(); // массив $_POST
+        $answer = $this->accountModel->authUser($postData);
+
+        return parent::generateAjaxResponse($answer);
     }
 
 }

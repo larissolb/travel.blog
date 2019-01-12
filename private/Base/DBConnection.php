@@ -4,7 +4,7 @@ namespace Dasha\Travelblog\Base;
 
 class DBConnection
 {
-   private $connection;
+   public $connection;
 
    public function __construct()
    {
