@@ -1,9 +1,9 @@
 {
   "db" : {
     "server":"localhost",
-    "dbname":"db",
-    "user":"username",
-    "pwd":"123"
+    "dbname":"blog",
+    "user":"root",
+    "pwd":""
   },
   "urls":{
     "show article":{
@@ -11,16 +11,19 @@
       "controller":"Dasha\\Travelblog\\Controllers\\IndexController::indexAction",
       "method": "GET"
     },
-
-    "history":{
-      "path":"/history",
-      "controller":"CompanyController::historyAction",
-      "method": "GET"
+    "registration":{
+      "path":"/account/registration",
+      "controller":"Dasha\\Travelblog\\Controllers\\AccountController::registrationAction",
+      "method": "POST"
     },
-
+    "auth":{
+      "path":"/account/auth",
+      "controller":"Dasha\\Travelblog\\Controllers\\AccountController::authAction",
+      "method": "POST"
+    },
     "goods":{
-      "path":"/goods/{id:\\d+}",
-      "controller":"GoodsController::allGoods",
+      "path":"/articles/show/{id:\\d+}",
+      "controller":"Dasha\\Travelblog\\Controllers\\ArticlesController::showArticleAction",
       "method": "GET"
     }
   }

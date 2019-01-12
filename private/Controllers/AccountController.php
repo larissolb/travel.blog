@@ -22,4 +22,13 @@ class AccountController extends Controller
         parent::generateResponse($view, $data);
     }
 
+    public function registrationAction(){
+
+        return parent::generateAjaxResponse($_POST['login']);
+    }
+
+    public function authAction(){
+        echo $_POST['login'];
+    }
+
 }

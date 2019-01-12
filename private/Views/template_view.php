@@ -75,6 +75,7 @@
 </div>
 <div><?php include_once $view; ?></div>
 <script  src="/static/js/enter_account_form.js"></script>
+<script  src="/static/js/sendForm.js"></script>
 </body>
 
 </html>

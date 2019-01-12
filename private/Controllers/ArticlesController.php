@@ -12,14 +12,15 @@ class ArticlesController extends Controller
         $this->articleModel = new ArticleModel();
     }
 
-    public function showAction($get){
+    public function showArticleAction($request){
+        var_dump($request);
         $view = 'article_view.php';
-        $article = $this->articleModel->getArticleById($get);
+        $article = $this->articleModel->getArticleById($request);
         $title =  $article['title'];
         $data = [
             'title' => $title,
             'article' => $article
         ];
-        parent::generateResponse($view, $data);
+        return parent::generateResponse($view, $data);
     }
 }

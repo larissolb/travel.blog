@@ -20,13 +20,13 @@
                 <div class="user_options-forms" id="user_options-forms">
                     <div class="user_forms-login">
                         <h2 class="forms_title">Войти</h2>
-                        <form class="forms_form">
+                        <form action="/account/auth" class="forms_form">
                             <fieldset class="forms_fieldset">
                                 <div class="forms_field">
-                                    <input type="email" placeholder="e-mail" class="forms_field-input" required autofocus />
+                                    <input name="login" type="text" placeholder="логин" class="forms_field-input" required autofocus />
                                 </div>
                                 <div class="forms_field">
-                                    <input type="password" placeholder="пароль" class="forms_field-input" required />
+                                    <input name="pwd" type="password" placeholder="пароль" class="forms_field-input" required />
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">
@@ -37,16 +37,16 @@
                     </div>
                     <div class="user_forms-signup">
                         <h2 class="forms_title">Зарегистрироваться</h2>
-                        <form class="forms_form">
+                        <form action="/account/registration" class="forms_form">
                             <fieldset class="forms_fieldset">
                                 <div class="forms_field">
-                                    <input type="text" placeholder="логин" class="forms_field-input" required />
+                                    <input name="login" type="text" placeholder="логин" class="forms_field-input" required />
                                 </div>
                                 <div class="forms_field">
-                                    <input type="email" placeholder="e-mail" class="forms_field-input" required />
+                                    <input name="email" type="email" placeholder="e-mail" class="forms_field-input" required />
                                 </div>
                                 <div class="forms_field">
-                                    <input type="password" placeholder="пароль" class="forms_field-input" required />
+                                    <input name="pwd" type="password" placeholder="пароль" class="forms_field-input" required />
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">

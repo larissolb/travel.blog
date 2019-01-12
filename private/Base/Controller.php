@@ -30,13 +30,24 @@ class Controller
         return $controllerData;
     }
 
-    protected function generateResponse($view, array $data,
+    protected function generateResponse($view, array $data=[],
                                         $template='template_view.php')
     {
         $response = new Response();
 
         $response->setBody(
             $this->render($view, $data, $template)
+        );
+
+        return $response;
+    }
+
+    protected function generateAjaxResponse($text)
+    {
+        $response = new Response();
+
+        $response->setBody(
+            $text
         );
 
         return $response;
